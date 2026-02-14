@@ -7,7 +7,7 @@ interface HeaderProps {
   onRefresh: () => void
 }
 
-export function Header({ status, secondsUntilRefresh, lastUpdated, onRefresh }: HeaderProps): JSX.Element {
+export function Header({ status, secondsUntilRefresh, lastUpdated, onRefresh }: HeaderProps) {
   return (
     <div className="titlebar">
       <span>OzStar Monitor</span>

@@ -4,7 +4,7 @@ interface FairShareProps {
   fairShare: FairShareInfo | null
 }
 
-export function FairShare({ fairShare }: FairShareProps): JSX.Element {
+export function FairShare({ fairShare }: FairShareProps) {
   if (!fairShare) return (
     <div className="panel fairshare-panel"><div className="panel-title">Fair-Share</div>
     <span style={{ color: 'var(--text-dimmed)' }}>Waiting for data...</span></div>

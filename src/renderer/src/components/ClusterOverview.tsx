@@ -5,7 +5,7 @@ interface ClusterOverviewProps {
   topUsers: TopUser[]
 }
 
-function UtilBar({ label, used, total, color }: { label: string; used: number; total: number; color: string }): JSX.Element {
+function UtilBar({ label, used, total, color }: { label: string; used: number; total: number; color: string }) {
   const pct = total > 0 ? (used / total) * 100 : 0
   return (
     <div style={{ marginBottom: 12 }}>
@@ -20,7 +20,7 @@ function UtilBar({ label, used, total, color }: { label: string; used: number; t
   )
 }
 
-export function ClusterOverview({ nodes, topUsers }: ClusterOverviewProps): JSX.Element {
+export function ClusterOverview({ nodes, topUsers }: ClusterOverviewProps) {
   if (!nodes) return (
     <div className="panel"><div className="panel-title">Cluster Overview</div>
     <span style={{ color: 'var(--text-dimmed)' }}>Waiting for data...</span></div>

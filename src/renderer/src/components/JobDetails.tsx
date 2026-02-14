@@ -5,7 +5,7 @@ interface JobDetailsProps {
   logTail: string | null
 }
 
-export function JobDetails({ job, logTail }: JobDetailsProps): JSX.Element {
+export function JobDetails({ job, logTail }: JobDetailsProps) {
   if (!job) return (
     <div className="panel details-panel"><div className="panel-title">Job Details</div>
     <span style={{ color: 'var(--text-dimmed)' }}>Click a job above to view details</span></div>

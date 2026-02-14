@@ -15,7 +15,7 @@ const STATE_ICONS: Record<string, string> = {
   TIMEOUT: '\u23F0',
 }
 
-export function MyJobs({ jobs, selectedJobId, onSelectJob }: MyJobsProps): JSX.Element {
+export function MyJobs({ jobs, selectedJobId, onSelectJob }: MyJobsProps) {
   const stateOrder: Record<string, number> = { RUNNING: 0, PENDING: 1, COMPLETED: 2, FAILED: 3, CANCELLED: 4, TIMEOUT: 5 }
   const sorted = [...jobs].sort((a, b) => (stateOrder[a.state] ?? 9) - (stateOrder[b.state] ?? 9))
 

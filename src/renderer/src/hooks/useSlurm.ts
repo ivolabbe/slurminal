@@ -17,7 +17,7 @@ export function useSlurm(): UseSlurmResult {
   const [selectedJobId, setSelectedJobId] = useState<number | null>(null)
   const [logTail, setLogTail] = useState<string | null>(null)
   const [secondsUntilRefresh, setSecondsUntilRefresh] = useState(30)
-  const timerRef = useRef<ReturnType<typeof setInterval>>()
+  const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined)
 
   useEffect(() => {
     window.ozstar.onClusterData((newData) => {
