@@ -1,0 +1,6126 @@
+{
+  "jobs": [
+    {
+      "account": "oz030",
+      "accrue_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771071768
+      },
+      "admin_comment": "",
+      "allocating_node": "tooarrana1",
+      "array_job_id": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "array_task_id": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "array_max_tasks": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "array_task_string": "",
+      "association_id": 273,
+      "batch_features": "",
+      "batch_flag": true,
+      "batch_host": "dave4",
+      "flags": [
+        "EXACT_TASK_COUNT_REQUESTED",
+        "EXACT_CPU_COUNT_REQUESTED",
+        "ACCRUE_COUNT_CLEARED",
+        "JOB_WAS_RUNNING",
+        "EXACT_MEMORY_REQUESTED",
+        "USING_DEFAULT_ACCOUNT",
+        "USING_DEFAULT_QOS",
+        "USING_DEFAULT_WCKEY",
+        "BACKFILL_ATTEMPTED"
+      ],
+      "burst_buffer": "",
+      "burst_buffer_state": "",
+      "cluster": "farnarkle",
+      "cluster_features": "",
+      "command": "\/fred\/oz030\/ilabbe\/sirocco\/lrd_models\/superedd\/v1\/submit_superedd.slurm",
+      "comment": "",
+      "container": "",
+      "container_id": "",
+      "contiguous": false,
+      "core_spec": 0,
+      "thread_spec": 32766,
+      "cores_per_socket": {
+        "set": true,
+        "infinite": false,
+        "number": 32
+      },
+      "billable_tres": {
+        "set": true,
+        "infinite": false,
+        "number": 768.0
+      },
+      "cpus_per_task": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "cpu_frequency_minimum": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpu_frequency_maximum": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpu_frequency_governor": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpus_per_tres": "",
+      "cron": "",
+      "deadline": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "delay_boot": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "dependency": "",
+      "derived_exit_code": {
+        "status": [
+          "SUCCESS"
+        ],
+        "return_code": {
+          "set": true,
+          "infinite": false,
+          "number": 0
+        },
+        "signal": {
+          "id": {
+            "set": false,
+            "infinite": false,
+            "number": 0
+          },
+          "name": ""
+        }
+      },
+      "eligible_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771071767
+      },
+      "end_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771114985
+      },
+      "excluded_nodes": "",
+      "exit_code": {
+        "status": [
+          "SUCCESS"
+        ],
+        "return_code": {
+          "set": true,
+          "infinite": false,
+          "number": 0
+        },
+        "signal": {
+          "id": {
+            "set": false,
+            "infinite": false,
+            "number": 0
+          },
+          "name": ""
+        }
+      },
+      "extra": "",
+      "failed_node": "",
+      "features": "",
+      "federation_origin": "",
+      "federation_siblings_active": "",
+      "federation_siblings_viable": "",
+      "gres_detail": [
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)",
+        "tmp(CNT:262144000)"
+      ],
+      "group_id": 503,
+      "group_name": "Swinburne",
+      "het_job_id": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "het_job_id_set": "",
+      "het_job_offset": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "job_id": 9685110,
+      "job_resources": {
+        "select_type": [
+          "CORE"
+        ],
+        "nodes": {
+          "count": 12,
+          "select_type": [
+            "ONE_ROW"
+          ],
+          "list": "dave[4,31,40-42,57,68,73,119,132,305-306]",
+          "whole": false,
+          "allocation": [
+            {
+              "index": 0,
+              "name": "dave4",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "dave31",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "dave40",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "name": "dave41",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "name": "dave42",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "name": "dave57",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "name": "dave68",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "name": "dave73",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "name": "dave119",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "name": "dave132",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "name": "dave305",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "name": "dave306",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 131072,
+                "allocated": 131072
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "cpus": 768,
+        "threads_per_core": {
+          "set": false,
+          "infinite": false,
+          "number": 0
+        }
+      },
+      "job_size_str": [
+      ],
+      "job_state": [
+        "RUNNING"
+      ],
+      "last_sched_evaluation": {
+        "set": true,
+        "infinite": false,
+        "number": 1771071785
+      },
+      "licenses": "",
+      "mail_type": [
+      ],
+      "mail_user": "ilabbe",
+      "max_cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "max_nodes": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "mcs_label": "",
+      "memory_per_tres": "",
+      "name": "se_v1",
+      "network": "",
+      "nodes": "dave[4,31,40-42,57,68,73,119,132,305-306]",
+      "nice": -58249999,
+      "tasks_per_core": {
+        "set": false,
+        "infinite": true,
+        "number": 0
+      },
+      "tasks_per_tres": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "tasks_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 64
+      },
+      "tasks_per_socket": {
+        "set": true,
+        "infinite": false,
+        "number": 32
+      },
+      "tasks_per_board": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 768
+      },
+      "node_count": {
+        "set": true,
+        "infinite": false,
+        "number": 12
+      },
+      "tasks": {
+        "set": true,
+        "infinite": false,
+        "number": 768
+      },
+      "partition": "milan",
+      "prefer": "",
+      "memory_per_cpu": {
+        "set": true,
+        "infinite": false,
+        "number": 2048
+      },
+      "memory_per_node": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "minimum_cpus_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 64
+      },
+      "minimum_tmp_disk_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 250
+      },
+      "power": {
+        "flags": [
+        ]
+      },
+      "preempt_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "preemptable_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "pre_sus_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "hold": false,
+      "priority": {
+        "set": true,
+        "infinite": false,
+        "number": 58487797
+      },
+      "priority_by_partition": [
+      ],
+      "profile": [
+        "NOT_SET"
+      ],
+      "qos": "normal",
+      "reboot": false,
+      "required_nodes": "",
+      "required_switches": 0,
+      "requeue": false,
+      "resize_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "restart_cnt": 0,
+      "resv_name": "",
+      "scheduled_nodes": "",
+      "selinux_context": "",
+      "shared": [
+      ],
+      "sockets_per_board": 0,
+      "sockets_per_node": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "start_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771071785
+      },
+      "state_description": "",
+      "state_reason": "None",
+      "standard_error": "\/fred\/oz030\/ilabbe\/sirocco\/lrd_models\/superedd\/v1\/logs\/superedd_9685110.err",
+      "standard_input": "\/dev\/null",
+      "standard_output": "\/fred\/oz030\/ilabbe\/sirocco\/lrd_models\/superedd\/v1\/logs\/superedd_9685110.out",
+      "submit_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771071767
+      },
+      "suspend_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "system_comment": "",
+      "time_limit": {
+        "set": true,
+        "infinite": false,
+        "number": 720
+      },
+      "time_minimum": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "threads_per_core": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "tres_bind": "",
+      "tres_freq": "",
+      "tres_per_job": "",
+      "tres_per_node": "gres\/tmp:250M",
+      "tres_per_socket": "",
+      "tres_per_task": "cpu=1",
+      "tres_req_str": "cpu=768,mem=1.50T,node=12,billing=768,gres\/tmp=3145728000",
+      "tres_alloc_str": "cpu=768,mem=1.50T,node=12,billing=768,gres\/tmp=3145728000",
+      "user_id": 10709,
+      "user_name": "ilabbe",
+      "maximum_switch_wait_time": 0,
+      "wckey": "",
+      "current_working_directory": "\/fred\/oz030\/ilabbe\/sirocco\/lrd_models\/superedd\/v1"
+    },
+    {
+      "account": "oz030",
+      "accrue_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771073127
+      },
+      "admin_comment": "",
+      "allocating_node": "tooarrana1",
+      "array_job_id": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "array_task_id": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "array_max_tasks": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "array_task_string": "",
+      "association_id": 273,
+      "batch_features": "",
+      "batch_flag": true,
+      "batch_host": "dave104",
+      "flags": [
+        "EXACT_TASK_COUNT_REQUESTED",
+        "EXACT_CPU_COUNT_REQUESTED",
+        "ACCRUE_COUNT_CLEARED",
+        "JOB_WAS_RUNNING",
+        "EXACT_MEMORY_REQUESTED",
+        "USING_DEFAULT_ACCOUNT",
+        "USING_DEFAULT_QOS",
+        "USING_DEFAULT_WCKEY",
+        "BACKFILL_ATTEMPTED"
+      ],
+      "burst_buffer": "",
+      "burst_buffer_state": "",
+      "cluster": "farnarkle",
+      "cluster_features": "",
+      "command": "\/fred\/oz030\/ilabbe\/lrd_model\/v10\/rho-12.0-mg\/submit.slurm",
+      "comment": "",
+      "container": "",
+      "container_id": "",
+      "contiguous": false,
+      "core_spec": 0,
+      "thread_spec": 32766,
+      "cores_per_socket": {
+        "set": true,
+        "infinite": false,
+        "number": 32
+      },
+      "billable_tres": {
+        "set": true,
+        "infinite": false,
+        "number": 64.0
+      },
+      "cpus_per_task": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "cpu_frequency_minimum": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpu_frequency_maximum": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpu_frequency_governor": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "cpus_per_tres": "",
+      "cron": "",
+      "deadline": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "delay_boot": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "dependency": "",
+      "derived_exit_code": {
+        "status": [
+          "SUCCESS"
+        ],
+        "return_code": {
+          "set": true,
+          "infinite": false,
+          "number": 0
+        },
+        "signal": {
+          "id": {
+            "set": false,
+            "infinite": false,
+            "number": 0
+          },
+          "name": ""
+        }
+      },
+      "eligible_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771073126
+      },
+      "end_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771087545
+      },
+      "excluded_nodes": "",
+      "exit_code": {
+        "status": [
+          "SUCCESS"
+        ],
+        "return_code": {
+          "set": true,
+          "infinite": false,
+          "number": 0
+        },
+        "signal": {
+          "id": {
+            "set": false,
+            "infinite": false,
+            "number": 0
+          },
+          "name": ""
+        }
+      },
+      "extra": "",
+      "failed_node": "",
+      "features": "",
+      "federation_origin": "",
+      "federation_siblings_active": "",
+      "federation_siblings_viable": "",
+      "gres_detail": [
+        "tmp(CNT:262144000)"
+      ],
+      "group_id": 503,
+      "group_name": "Swinburne",
+      "het_job_id": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "het_job_id_set": "",
+      "het_job_offset": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "job_id": 9687331,
+      "job_resources": {
+        "select_type": [
+          "CORE"
+        ],
+        "nodes": {
+          "count": 1,
+          "select_type": [
+            "ONE_ROW"
+          ],
+          "list": "dave104",
+          "whole": false,
+          "allocation": [
+            {
+              "index": 0,
+              "name": "dave104",
+              "cpus": {
+                "count": 64,
+                "used": 64
+              },
+              "memory": {
+                "used": 256000,
+                "allocated": 256000
+              },
+              "sockets": [
+                {
+                  "index": 0,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "index": 1,
+                  "cores": [
+                    {
+                      "index": 0,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 1,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 2,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 3,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 4,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 5,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 6,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 7,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 8,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 9,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 10,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 11,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 12,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 13,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 14,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 15,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 16,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 17,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 18,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 19,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 20,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 21,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 22,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 23,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 24,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 25,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 26,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 27,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 28,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 29,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 30,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    },
+                    {
+                      "index": 31,
+                      "status": [
+                        "ALLOCATED"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "cpus": 64,
+        "threads_per_core": {
+          "set": false,
+          "infinite": false,
+          "number": 0
+        }
+      },
+      "job_size_str": [
+      ],
+      "job_state": [
+        "RUNNING"
+      ],
+      "last_sched_evaluation": {
+        "set": true,
+        "infinite": false,
+        "number": 1771073145
+      },
+      "licenses": "",
+      "mail_type": [
+      ],
+      "mail_user": "ilabbe",
+      "max_cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "max_nodes": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "mcs_label": "",
+      "memory_per_tres": "",
+      "name": "lrd_r120",
+      "network": "",
+      "nodes": "dave104",
+      "nice": 0,
+      "tasks_per_core": {
+        "set": false,
+        "infinite": true,
+        "number": 0
+      },
+      "tasks_per_tres": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "tasks_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "tasks_per_socket": {
+        "set": true,
+        "infinite": false,
+        "number": 32
+      },
+      "tasks_per_board": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 64
+      },
+      "node_count": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "tasks": {
+        "set": true,
+        "infinite": false,
+        "number": 64
+      },
+      "partition": "milan",
+      "prefer": "",
+      "memory_per_cpu": {
+        "set": true,
+        "infinite": false,
+        "number": 4000
+      },
+      "memory_per_node": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "minimum_cpus_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "minimum_tmp_disk_per_node": {
+        "set": true,
+        "infinite": false,
+        "number": 250
+      },
+      "power": {
+        "flags": [
+        ]
+      },
+      "preempt_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "preemptable_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "pre_sus_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "hold": false,
+      "priority": {
+        "set": true,
+        "infinite": false,
+        "number": 137324
+      },
+      "priority_by_partition": [
+        {
+          "partition": "milan",
+          "priority": 137324
+        },
+        {
+          "partition": "milan-c",
+          "priority": 137324
+        }
+      ],
+      "profile": [
+        "NOT_SET"
+      ],
+      "qos": "normal",
+      "reboot": false,
+      "required_nodes": "",
+      "required_switches": 0,
+      "requeue": false,
+      "resize_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "restart_cnt": 0,
+      "resv_name": "",
+      "scheduled_nodes": "",
+      "selinux_context": "",
+      "shared": [
+      ],
+      "sockets_per_board": 0,
+      "sockets_per_node": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "start_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771073145
+      },
+      "state_description": "",
+      "state_reason": "None",
+      "standard_error": "\/fred\/oz030\/ilabbe\/lrd_model\/v10\/rho-12.0-mg\/run.err",
+      "standard_input": "\/dev\/null",
+      "standard_output": "\/fred\/oz030\/ilabbe\/lrd_model\/v10\/rho-12.0-mg\/run.log",
+      "submit_time": {
+        "set": true,
+        "infinite": false,
+        "number": 1771073126
+      },
+      "suspend_time": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "system_comment": "",
+      "time_limit": {
+        "set": true,
+        "infinite": false,
+        "number": 240
+      },
+      "time_minimum": {
+        "set": true,
+        "infinite": false,
+        "number": 0
+      },
+      "threads_per_core": {
+        "set": false,
+        "infinite": false,
+        "number": 0
+      },
+      "tres_bind": "",
+      "tres_freq": "",
+      "tres_per_job": "",
+      "tres_per_node": "gres\/tmp:250M",
+      "tres_per_socket": "",
+      "tres_per_task": "cpu=1",
+      "tres_req_str": "cpu=64,mem=250G,node=1,billing=64,gres\/tmp=262144000",
+      "tres_alloc_str": "cpu=64,mem=250G,node=1,billing=64,gres\/tmp=262144000",
+      "user_id": 10709,
+      "user_name": "ilabbe",
+      "maximum_switch_wait_time": 0,
+      "wckey": "",
+      "current_working_directory": "\/fred\/oz030\/ilabbe\/lrd_model\/v10\/rho-12.0-mg"
+    }
+  ],
+  "last_backfill": {
+    "set": true,
+    "infinite": false,
+    "number": 1771074307
+  },
+  "last_update": {
+    "set": true,
+    "infinite": false,
+    "number": 1771074313
+  },
+  "meta": {
+    "plugin": {
+      "type": "",
+      "name": "",
+      "data_parser": "data_parser\/v0.0.42",
+      "accounting_storage": "accounting_storage\/slurmdbd"
+    },
+    "client": {
+      "source": "",
+      "user": "ilabbe",
+      "group": "Swinburne"
+    },
+    "command": [
+      "squeue",
+      "-u",
+      "ilabbe"
+    ],
+    "slurm": {
+      "version": {
+        "major": "24",
+        "micro": "6",
+        "minor": "11"
+      },
+      "release": "24.11.6",
+      "cluster": "farnarkle"
+    }
+  },
+  "errors": [
+  ],
+  "warnings": [
+  ]
+}

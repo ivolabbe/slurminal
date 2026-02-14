@@ -1,0 +1,312 @@
+{
+  "jobs": [
+    {
+      "job_id": 6364097,
+      "name": "j1424-obs2-model",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 8
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6364098,
+      "name": "j1424-obs2-extract",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6773709,
+      "name": "j1424-obs2-concat",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6773710,
+      "name": "j1424-obs2-fix-weights",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6773711,
+      "name": "j1424-obs2-flag",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6773712,
+      "name": "j1424-obs2-model",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 8
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 6773713,
+      "name": "j1424-obs2-extract",
+      "user_name": "jpritcha",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7682923,
+      "name": "merge_J0942-5657_2021-05-03-06-24-34",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7682950,
+      "name": "merge_J0942-5657_2021-05-06-08-15-51",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7682977,
+      "name": "merge_J0942-5657_2021-06-03-10-05-55",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683004,
+      "name": "merge_J0942-5657_2021-06-15-07-07-41",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683006,
+      "name": "merge_J0942-5657_2021-07-02-05-40-02",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683049,
+      "name": "merge_J0942-5657_2021-07-10-02-53-10",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683092,
+      "name": "merge_J0942-5657_2021-08-26-23-40-27",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683179,
+      "name": "merge_J0952-3839_2020-09-24-18-49-13",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683183,
+      "name": "merge_J0959-4809_2020-11-01-19-06-02",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683246,
+      "name": "merge_J0959-4809_2020-12-14-15-53-00",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683298,
+      "name": "merge_J0959-4809_2021-01-03-12-45-00",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683300,
+      "name": "merge_J0959-4809_2021-01-11-12-42-50",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    },
+    {
+      "job_id": 7683414,
+      "name": "merge_J0959-4809_2021-02-28-08-57-55",
+      "user_name": "dvohl",
+      "job_state": [
+        "PENDING"
+      ],
+      "cpus": {
+        "set": true,
+        "infinite": false,
+        "number": 1
+      },
+      "nodes": ""
+    }
+  ],
+  "meta": {
+    "plugin": {
+      "type": "",
+      "name": "",
+      "data_parser": "data_parser/v0.0.42",
+      "accounting_storage": "accounting_storage/slurmdbd"
+    },
+    "client": {
+      "source": "",
+      "user": "ilabbe",
+      "group": "Swinburne"
+    },
+    "command": [
+      "squeue",
+      "--all"
+    ],
+    "slurm": {
+      "version": {
+        "major": "24",
+        "micro": "6",
+        "minor": "11"
+      },
+      "release": "24.11.6",
+      "cluster": "farnarkle"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
