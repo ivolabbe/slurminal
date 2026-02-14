@@ -1,8 +1,12 @@
-import { ElectronAPI } from '@electron-toolkit/preload'
+import type { ClusterData, ConnectionStatus } from '../shared/types'
 
 declare global {
   interface Window {
-    electron: ElectronAPI
-    api: unknown
+    ozstar: {
+      onClusterData: (callback: (data: ClusterData) => void) => void
+      onConnectionStatus: (callback: (status: ConnectionStatus) => void) => void
+      requestRefresh: () => void
+      requestLogTail: (filePath: string) => Promise<string>
+    }
   }
 }

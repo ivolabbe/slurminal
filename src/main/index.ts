@@ -1,33 +1,29 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-import icon from '../../resources/icon.png?asset'
+import { SSHManager } from './ssh'
+import { SlurmFetcher } from './slurm'
+import { IPC_CHANNELS } from '../shared/types'
+
+let mainWindow: BrowserWindow | null = null
+let sshManager: SSHManager
+let slurmFetcher: SlurmFetcher
+let pollInterval: ReturnType<typeof setInterval> | null = null
 
 function createWindow(): void {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
-    show: false,
-    autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+  mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 700,
+    minWidth: 800,
+    minHeight: 500,
+    titleBarStyle: 'hiddenInset',
+    backgroundColor: '#0a0a0f',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
-    }
+      sandbox: false,
+    },
   })
 
-  mainWindow.on('ready-to-show', () => {
-    mainWindow.show()
-  })
-
-  mainWindow.webContents.setWindowOpenHandler((details) => {
-    shell.openExternal(details.url)
-    return { action: 'deny' }
-  })
-
-  // HMR for renderer base on electron-vite cli.
-  // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
   } else {
@@ -35,40 +31,66 @@ function createWindow(): void {
   }
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.whenReady().then(() => {
-  // Set app user model id for windows
-  electronApp.setAppUserModelId('com.electron')
+async function fetchAndSend(): Promise<void> {
+  if (!mainWindow) return
+  try {
+    const data = await slurmFetcher.fetchAll()
+    mainWindow.webContents.send(IPC_CHANNELS.CLUSTER_DATA, data)
+  } catch (err) {
+    console.error('Fetch error:', err)
+    try {
+      await sshManager.connect()
+    } catch {
+      /* status change handled via callback */
+    }
+  }
+}
 
-  // Default open or close DevTools by F12 in development
-  // and ignore CommandOrControl + R in production.
-  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
+function startPolling(): void {
+  fetchAndSend()
+  pollInterval = setInterval(fetchAndSend, 30_000)
+}
+
+function stopPolling(): void {
+  if (pollInterval) {
+    clearInterval(pollInterval)
+    pollInterval = null
+  }
+}
+
+app.whenReady().then(async () => {
+  electronApp.setAppUserModelId('com.ozstar.monitor')
+  app.on('browser-window-created', (_, window) => optimizer.watchWindowShortcuts(window))
+
+  sshManager = new SSHManager()
+  sshManager.onStatusChange((status) => {
+    mainWindow?.webContents.send(IPC_CHANNELS.CONNECTION_STATUS, status)
   })
+  slurmFetcher = new SlurmFetcher(sshManager)
 
-  // IPC test
-  ipcMain.on('ping', () => console.log('pong'))
+  ipcMain.on(IPC_CHANNELS.REQUEST_REFRESH, () => fetchAndSend())
+  ipcMain.handle(IPC_CHANNELS.REQUEST_LOG_TAIL, async (_event, filePath: string) => {
+    return slurmFetcher.fetchLogTail(filePath)
+  })
 
   createWindow()
 
-  app.on('activate', function () {
-    // On macOS it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
-  })
-})
+  mainWindow?.on('hide', stopPolling)
+  mainWindow?.on('minimize', stopPolling)
+  mainWindow?.on('show', startPolling)
+  mainWindow?.on('restore', startPolling)
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
+  try {
+    await sshManager.connect()
+    startPolling()
+  } catch (err) {
+    console.error('Initial SSH connection failed:', err)
+    mainWindow?.webContents.send(IPC_CHANNELS.CONNECTION_STATUS, 'disconnected')
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+app.on('window-all-closed', () => {
+  stopPolling()
+  sshManager?.dispose()
+  app.quit()
+})
