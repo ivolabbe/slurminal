@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: ozstar-monitor
+appId: com.ozstar.monitor
+productName: OzStar Monitor
 directories:
   buildResources: build
 files:

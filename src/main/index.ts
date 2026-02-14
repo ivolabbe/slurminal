@@ -9,13 +9,15 @@ let mainWindow: BrowserWindow | null = null
 let sshManager: SSHManager
 let slurmFetcher: SlurmFetcher
 let pollInterval: ReturnType<typeof setInterval> | null = null
+let sshReady = false
 
 function createWindow(): void {
   mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 700,
-    minWidth: 800,
-    minHeight: 500,
+    width: 900,
+    height: 600,
+    minWidth: 700,
+    minHeight: 450,
+    show: false,
     titleBarStyle: 'hiddenInset',
     backgroundColor: '#0a0a0f',
     webPreferences: {
@@ -23,6 +25,9 @@ function createWindow(): void {
       sandbox: false,
     },
   })
+
+  // Show window once content is ready (avoids flash)
+  mainWindow.on('ready-to-show', () => mainWindow?.show())
 
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
@@ -47,6 +52,8 @@ async function fetchAndSend(): Promise<void> {
 }
 
 function startPolling(): void {
+  if (!sshReady) return
+  stopPolling()
   fetchAndSend()
   pollInterval = setInterval(fetchAndSend, 30_000)
 }
@@ -75,13 +82,16 @@ app.whenReady().then(async () => {
 
   createWindow()
 
+  // Only pause/resume polling on hide/show — don't start before SSH is ready
   mainWindow?.on('hide', stopPolling)
   mainWindow?.on('minimize', stopPolling)
-  mainWindow?.on('show', startPolling)
-  mainWindow?.on('restore', startPolling)
+  mainWindow?.on('show', () => { if (sshReady) startPolling() })
+  mainWindow?.on('restore', () => { if (sshReady) startPolling() })
 
+  // Connect SSH and start polling immediately
   try {
     await sshManager.connect()
+    sshReady = true
     startPolling()
   } catch (err) {
     console.error('Initial SSH connection failed:', err)
