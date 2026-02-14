@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="slurminal.png" width="128" height="128" alt="Slurminal">
+  <img src="build/slurminal.png" width="128" height="128" alt="Slurminal">
 </p>
 
 <h1 align="center">Slurminal</h1>

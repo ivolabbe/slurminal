@@ -3,7 +3,7 @@ import type { SlurmJob } from '../../../shared/types'
 interface MyJobsProps {
   jobs: SlurmJob[]
   selectedJobId: number | null
-  onSelectJob: (jobId: number) => void
+  onSelectJob: (jobId: number | null) => void
 }
 
 const STATE_ICONS: Record<string, string> = {
@@ -25,7 +25,7 @@ export function MyJobs({ jobs, selectedJobId, onSelectJob }: MyJobsProps) {
       {sorted.length === 0 && <span style={{ color: 'var(--text-dimmed)' }}>No jobs in queue</span>}
       {sorted.map((job) => (
         <div key={job.job_id} className={`job-row ${selectedJobId === job.job_id ? 'selected' : ''}`}
-          onClick={() => onSelectJob(job.job_id)}>
+          onClick={() => onSelectJob(selectedJobId === job.job_id ? null : job.job_id)}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span className="job-name">{STATE_ICONS[job.state] ?? '?'} {job.name}</span>
             <span className={`state-badge ${job.state}`}>{job.state}</span>
