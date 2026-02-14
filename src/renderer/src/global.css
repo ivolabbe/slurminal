@@ -35,8 +35,9 @@ body {
   height: 38px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 80px 0 16px;
+  justify-content: center;
+  padding: 0 16px;
+  position: relative;
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border);
   font-size: 12px;
@@ -48,6 +49,8 @@ body {
 
 .titlebar .status {
   -webkit-app-region: no-drag;
+  position: absolute;
+  right: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
