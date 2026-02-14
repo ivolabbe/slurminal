@@ -32,7 +32,7 @@ function createWindow(): void {
 }
 
 async function fetchAndSend(): Promise<void> {
-  if (!mainWindow) return
+  if (!mainWindow || sshManager.status !== 'connected') return
   try {
     const data = await slurmFetcher.fetchAll()
     mainWindow.webContents.send(IPC_CHANNELS.CLUSTER_DATA, data)

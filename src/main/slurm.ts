@@ -11,11 +11,11 @@ import { parseMyJobs, parseNodeSummary, parseTopUsers, parseFairShare } from './
 
 /** SLURM commands to run on OzStar. */
 const COMMANDS = {
-  squeue: 'squeue --me --json',
-  squeueAll: 'squeue --json',
+  squeue: 'squeue -u ilabbe --json',
+  squeueAll: 'squeue --all --json',
   sinfo: 'sinfo --json',
-  sshare: 'sshare --me --json',
-  sacct: 'sacct --me --starttime=now-7days --json',
+  sshare: 'sshare -u ilabbe --json',
+  sacct: 'sacct -u ilabbe --starttime=now-24hours --json',
 } as const
 
 export class SlurmFetcher {
