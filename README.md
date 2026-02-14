@@ -28,7 +28,7 @@ cd slurminal
 npm install
 ```
 
-## Run
+## Run (dev mode)
 
 ```bash
 npm run slurminal
@@ -57,7 +57,9 @@ npm run slurminal -- --host login.hpc.example.edu --user jsmith --title "My Clus
 - SSH key in `~/.ssh/` (ed25519, RSA, or ECDSA)
 - SLURM commands available on the remote host (`squeue`, `sinfo`, `sshare`, `sacct`)
 
-## Build
+## Build standalone app
+
+Package Slurminal as a native desktop app (`.app`, `.dmg`, `.AppImage`, etc.) that runs from your Dock without a terminal.
 
 ```bash
 # macOS
