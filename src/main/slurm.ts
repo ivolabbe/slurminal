@@ -9,26 +9,30 @@ import type { ClusterData } from '../shared/types'
 import type { SSHManager } from './ssh'
 import { parseMyJobs, parseNodeSummary, parseTopUsers, parseFairShare } from './slurm-parser'
 
-/** SLURM commands to run on OzStar. */
-const COMMANDS = {
-  squeue: 'squeue -u ilabbe --json',
-  squeueAll: 'squeue --all --json',
-  sinfo: 'sinfo --json',
-  sshare: 'sshare -u ilabbe --json',
-  sacct: 'sacct -u ilabbe --starttime=now-24hours --json',
-} as const
-
 export class SlurmFetcher {
-  constructor(private ssh: SSHManager) {}
+  private commands: Record<string, string>
+
+  constructor(
+    private ssh: SSHManager,
+    private user: string
+  ) {
+    this.commands = {
+      squeue: `squeue -u ${user} --json`,
+      squeueAll: 'squeue --all --json',
+      sinfo: 'sinfo --json',
+      sshare: `sshare -u ${user} --json`,
+      sacct: `sacct -u ${user} --starttime=now-24hours --json`,
+    }
+  }
 
   /** Fetch all SLURM data in parallel, parse, and return a ClusterData snapshot. */
   async fetchAll(): Promise<ClusterData> {
     const [squeueRaw, squeueAllRaw, sinfoRaw, sshareRaw, sacctRaw] = await Promise.all([
-      this.ssh.exec(COMMANDS.squeue),
-      this.ssh.exec(COMMANDS.squeueAll),
-      this.ssh.exec(COMMANDS.sinfo),
-      this.ssh.exec(COMMANDS.sshare),
-      this.ssh.exec(COMMANDS.sacct),
+      this.ssh.exec(this.commands.squeue),
+      this.ssh.exec(this.commands.squeueAll),
+      this.ssh.exec(this.commands.sinfo),
+      this.ssh.exec(this.commands.sshare),
+      this.ssh.exec(this.commands.sacct),
     ])
 
     const squeueJson = JSON.parse(squeueRaw)
@@ -41,7 +45,7 @@ export class SlurmFetcher {
       my_jobs: parseMyJobs(squeueJson, sacctJson),
       node_summary: parseNodeSummary(sinfoJson),
       top_users: parseTopUsers(squeueAllJson),
-      fair_share: parseFairShare(sshareJson),
+      fair_share: parseFairShare(sshareJson, this.user),
       last_updated: new Date().toISOString(),
     }
   }

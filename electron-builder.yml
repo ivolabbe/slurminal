@@ -1,5 +1,5 @@
-appId: com.ozstar.monitor
-productName: OzStar Monitor
+appId: com.slurminal.app
+productName: Slurminal
 directories:
   buildResources: build
 files:
@@ -9,10 +9,13 @@ files:
   - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+extraResources:
+  - from: build/icon.png
+    to: icon.png
 asarUnpack:
   - resources/**
 win:
-  executableName: ozstar-monitor
+  executableName: slurminal
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

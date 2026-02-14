@@ -53,10 +53,17 @@ export interface ClusterData {
 
 export type ConnectionStatus = 'connected' | 'reconnecting' | 'disconnected'
 
+export interface HpcConfig {
+  host: string
+  user: string
+  name: string
+}
+
 export const IPC_CHANNELS = {
   CLUSTER_DATA: 'cluster:data',
   CONNECTION_STATUS: 'cluster:status',
   REQUEST_REFRESH: 'cluster:refresh',
   REQUEST_LOG_TAIL: 'cluster:log-tail',
   LOG_TAIL_RESULT: 'cluster:log-tail-result',
+  GET_CONFIG: 'cluster:get-config',
 } as const

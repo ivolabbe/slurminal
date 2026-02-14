@@ -14,4 +14,7 @@ contextBridge.exposeInMainWorld('ozstar', {
   requestLogTail: (filePath: string): Promise<string> => {
     return ipcRenderer.invoke(IPC_CHANNELS.REQUEST_LOG_TAIL, filePath)
   },
+  getConfig: (): Promise<any> => {
+    return ipcRenderer.invoke(IPC_CHANNELS.GET_CONFIG)
+  },
 })

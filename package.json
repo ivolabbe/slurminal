@@ -1,7 +1,7 @@
 {
-  "name": "ozstar-monitor",
+  "name": "slurminal",
   "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "SSH-based SLURM cluster monitor",
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",
@@ -12,6 +12,7 @@
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
+    "slurminal": "electron-vite dev",
     "dev": "electron-vite dev",
     "build": "npm run typecheck && electron-vite build",
     "postinstall": "electron-builder install-app-deps",

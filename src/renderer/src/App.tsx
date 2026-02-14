@@ -6,13 +6,14 @@ import { JobDetails } from './components/JobDetails'
 import { useSlurm } from './hooks/useSlurm'
 
 function App() {
-  const { data, status, selectedJobId, logTail, selectJob, refresh, secondsUntilRefresh } = useSlurm()
+  const { data, status, config, selectedJobId, logTail, selectJob, refresh, secondsUntilRefresh } = useSlurm()
 
   const selectedJob = data?.my_jobs.find((j) => j.job_id === selectedJobId) ?? null
 
   return (
     <div className="app">
       <Header
+        title={config?.name ?? 'Slurminal'}
         status={status}
         secondsUntilRefresh={secondsUntilRefresh}
         lastUpdated={data?.last_updated ?? null}
@@ -22,6 +23,7 @@ function App() {
         <ClusterOverview
           nodes={data?.node_summary ?? null}
           topUsers={data?.top_users ?? []}
+          currentUser={config?.user ?? ''}
         />
         <MyJobs
           jobs={data?.my_jobs ?? []}

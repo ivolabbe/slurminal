@@ -1,4 +1,4 @@
-import type { ClusterData, ConnectionStatus } from '../shared/types'
+import type { ClusterData, ConnectionStatus, HpcConfig } from '../shared/types'
 
 declare global {
   interface Window {
@@ -7,6 +7,7 @@ declare global {
       onConnectionStatus: (callback: (status: ConnectionStatus) => void) => void
       requestRefresh: () => void
       requestLogTail: (filePath: string) => Promise<string>
+      getConfig: () => Promise<HpcConfig>
     }
   }
 }

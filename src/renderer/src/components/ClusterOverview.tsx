@@ -3,6 +3,7 @@ import type { NodeSummary, TopUser } from '../../../shared/types'
 interface ClusterOverviewProps {
   nodes: NodeSummary | null
   topUsers: TopUser[]
+  currentUser: string
 }
 
 function UtilBar({ label, used, total, color }: { label: string; used: number; total: number; color: string }) {
@@ -20,7 +21,7 @@ function UtilBar({ label, used, total, color }: { label: string; used: number; t
   )
 }
 
-export function ClusterOverview({ nodes, topUsers }: ClusterOverviewProps) {
+export function ClusterOverview({ nodes, topUsers, currentUser }: ClusterOverviewProps) {
   if (!nodes) return (
     <div className="panel"><div className="panel-title">Cluster Overview</div>
     <span style={{ color: 'var(--text-dimmed)' }}>Waiting for data...</span></div>
@@ -42,7 +43,7 @@ export function ClusterOverview({ nodes, topUsers }: ClusterOverviewProps) {
       )}
       <div className="panel-title" style={{ marginTop: 16 }}>Top Users</div>
       {topUsers.slice(0, 10).map((u) => (
-        <div key={u.user} className={`user-row ${u.user === 'ilabbe' ? 'me' : ''}`}>
+        <div key={u.user} className={`user-row ${u.user === currentUser ? 'me' : ''}`}>
           <span>{u.user}</span>
           <span>{u.core_count.toLocaleString()} cores</span>
         </div>

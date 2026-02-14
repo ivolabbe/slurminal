@@ -11,8 +11,6 @@ import { join } from 'path'
 import { existsSync } from 'fs'
 import type { ConnectionStatus } from '../shared/types'
 
-const SSH_HOST = 'nt.swin.edu.au'
-const SSH_USER = 'ilabbe'
 const RECONNECT_DELAY_MS = 5_000
 const KEY_CANDIDATES = ['id_ed25519', 'id_rsa', 'id_ecdsa']
 
@@ -24,7 +22,10 @@ export class SSHManager {
   private currentStatus: ConnectionStatus = 'disconnected'
   private reconnectTimer: ReturnType<typeof setTimeout> | null = null
 
-  constructor() {
+  constructor(
+    private readonly host: string,
+    private readonly user: string
+  ) {
     this.ssh = new NodeSSH()
   }
 
@@ -47,8 +48,8 @@ export class SSHManager {
 
     try {
       await this.ssh.connect({
-        host: SSH_HOST,
-        username: SSH_USER,
+        host: this.host,
+        username: this.user,
         privateKeyPath: keyPath,
         readyTimeout: 15_000,
         keepaliveInterval: 30_000,

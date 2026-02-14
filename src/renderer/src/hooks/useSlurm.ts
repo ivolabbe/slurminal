@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import type { ClusterData, ConnectionStatus } from '../../../shared/types'
+import type { ClusterData, ConnectionStatus, HpcConfig } from '../../../shared/types'
 
 interface UseSlurmResult {
   data: ClusterData | null
   status: ConnectionStatus
+  config: HpcConfig | null
   selectedJobId: number | null
   logTail: string | null
   selectJob: (jobId: number | null) => void
@@ -14,12 +15,14 @@ interface UseSlurmResult {
 export function useSlurm(): UseSlurmResult {
   const [data, setData] = useState<ClusterData | null>(null)
   const [status, setStatus] = useState<ConnectionStatus>('disconnected')
+  const [config, setConfig] = useState<HpcConfig | null>(null)
   const [selectedJobId, setSelectedJobId] = useState<number | null>(null)
   const [logTail, setLogTail] = useState<string | null>(null)
   const [secondsUntilRefresh, setSecondsUntilRefresh] = useState(30)
   const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined)
 
   useEffect(() => {
+    window.ozstar.getConfig().then(setConfig)
     window.ozstar.onClusterData((newData) => {
       setData(newData)
       setSecondsUntilRefresh(30)
@@ -56,5 +59,5 @@ export function useSlurm(): UseSlurmResult {
     window.ozstar.requestRefresh()
   }, [])
 
-  return { data, status, selectedJobId, logTail, selectJob, refresh, secondsUntilRefresh }
+  return { data, status, config, selectedJobId, logTail, selectJob, refresh, secondsUntilRefresh }
 }
