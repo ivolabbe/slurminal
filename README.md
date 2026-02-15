@@ -5,7 +5,7 @@
 <h1 align="center">Slurminal</h1>
 
 <p align="center">
-  SSH-based SLURM cluster monitor for your desktop.
+  SLURM cluster monitor for your desktop.
 </p>
 
 ---
