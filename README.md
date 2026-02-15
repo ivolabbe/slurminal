@@ -14,9 +14,10 @@ Slurminal connects to any HPC cluster over SSH and gives you a live dashboard of
 
 ## Features
 
-- **My Jobs** -- running, pending, and recently completed jobs with expandable log tails
+- **My Jobs** -- running, pending, and recently completed jobs with log tails
 - **Cluster Overview** -- node/core utilization bars, top users by core count
 - **Fair-Share** -- your current priority factor and effective usage
+- **Disk Quota** -- filesystem disk and inode usage with per-mount bars (via `quota -vs`)
 - **Auto-refresh** every 30 seconds with manual refresh on click
 - **First-launch setup** -- prompted for `user@host`, saved to `~/.slurminal.json`
 
@@ -55,7 +56,7 @@ npm run slurminal -- --host login.hpc.example.edu --user jsmith --title "My Clus
 ### Requirements
 
 - SSH key in `~/.ssh/` (ed25519, RSA, or ECDSA)
-- SLURM commands available on the remote host (`squeue`, `sinfo`, `sshare`, `sacct`)
+- SLURM commands available on the remote host (`squeue`, `sinfo`, `sshare`, `sacct`, `quota`)
 
 ## Build standalone app
 
