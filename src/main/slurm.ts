@@ -7,7 +7,7 @@
 
 import type { ClusterData } from '../shared/types'
 import type { SSHManager } from './ssh'
-import { parseMyJobs, parseNodeSummary, parseTopUsers, parseFairShare } from './slurm-parser'
+import { parseMyJobs, parseNodeSummary, parseTopUsers, parseFairShare, parseQuota } from './slurm-parser'
 
 export class SlurmFetcher {
   private commands: Record<string, string>
@@ -22,17 +22,19 @@ export class SlurmFetcher {
       sinfo: 'sinfo --json',
       sshare: `sshare -u ${user} --json`,
       sacct: `sacct -u ${user} --starttime=now-24hours --json`,
+      quota: 'quota -vs 2>/dev/null',
     }
   }
 
   /** Fetch all SLURM data in parallel, parse, and return a ClusterData snapshot. */
   async fetchAll(): Promise<ClusterData> {
-    const [squeueRaw, squeueAllRaw, sinfoRaw, sshareRaw, sacctRaw] = await Promise.all([
+    const [squeueRaw, squeueAllRaw, sinfoRaw, sshareRaw, sacctRaw, quotaRaw] = await Promise.all([
       this.ssh.exec(this.commands.squeue),
       this.ssh.exec(this.commands.squeueAll),
       this.ssh.exec(this.commands.sinfo),
       this.ssh.exec(this.commands.sshare),
       this.ssh.exec(this.commands.sacct),
+      this.ssh.exec(this.commands.quota).catch(() => ''),
     ])
 
     const squeueJson = JSON.parse(squeueRaw)
@@ -46,12 +48,13 @@ export class SlurmFetcher {
       node_summary: parseNodeSummary(sinfoJson),
       top_users: parseTopUsers(squeueAllJson),
       fair_share: parseFairShare(sshareJson, this.user),
+      quota: parseQuota(quotaRaw),
       last_updated: new Date().toISOString(),
     }
   }
 
   /** Fetch the last N lines of a remote file (e.g. job stdout log). */
-  async fetchLogTail(path: string, lines = 15): Promise<string> {
+  async fetchLogTail(path: string, lines = 4): Promise<string> {
     return this.ssh.exec(`tail -n ${lines} ${path}`)
   }
 }

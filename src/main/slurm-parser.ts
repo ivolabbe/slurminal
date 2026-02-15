@@ -5,7 +5,7 @@
  * SLURM command and returns a typed result.
  */
 
-import type { SlurmJob, NodeSummary, TopUser, FairShareInfo } from '../shared/types'
+import type { SlurmJob, NodeSummary, TopUser, FairShareInfo, QuotaInfo, FilesystemQuota } from '../shared/types'
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -294,4 +294,105 @@ export function parseFairShare(
     effective_usage: num(entry.effective_usage),
     fair_share_factor: num(entry.fairshare?.factor),
   }
+}
+
+// ---------------------------------------------------------------------------
+// parseQuota
+// ---------------------------------------------------------------------------
+
+/** Format kbytes into human-readable string (e.g. "11.9 GB", "10 TB"). */
+function formatKB(kb: number): string {
+  const bytes = kb * 1024
+  let val: number, unit: string
+  if (bytes >= 1024 ** 4) { val = bytes / 1024 ** 4; unit = 'TB' }
+  else if (bytes >= 1024 ** 3) { val = bytes / 1024 ** 3; unit = 'GB' }
+  else if (bytes >= 1024 ** 2) { val = bytes / 1024 ** 2; unit = 'MB' }
+  else { val = bytes / 1024; unit = 'KB' }
+  const s = val.toFixed(1)
+  return `${s.endsWith('.0') ? s.slice(0, -2) : s} ${unit}`
+}
+
+/** Format a number with comma separators (e.g. 41467 -> "41,467"). */
+function formatCount(n: number): string {
+  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}
+
+/**
+ * Parse a single quota data line (tokens split by whitespace).
+ *
+ * Fixed column layout (9 tokens):
+ *   filesystem  kbytes  quota  limit  grace  files  quota  limit  grace
+ *   [0]         [1]     [2]    [3]    [4]    [5]    [6]    [7]    [8]
+ */
+function parseQuotaLine(tokens: string[], owner: string): FilesystemQuota | null {
+  if (tokens.length < 9) return null
+
+  const filesystem = tokens[0]
+  const overQuota = tokens[1].includes('*')
+  const spaceUsedKB = parseInt(tokens[1].replace('*', '')) || 0
+  const spaceLimitKB = parseInt(tokens[3]) || 0
+  const filesUsed = parseInt(tokens[5].replace('*', '')) || 0
+  const filesLimit = parseInt(tokens[7]) || 0
+
+  const spacePct = spaceLimitKB > 0 ? Math.min((spaceUsedKB / spaceLimitKB) * 100, 100) : 0
+  const filesPct = filesLimit > 0 ? Math.min((filesUsed / filesLimit) * 100, 100) : 0
+
+  return {
+    filesystem,
+    owner,
+    space_used: formatKB(spaceUsedKB),
+    space_limit: formatKB(spaceLimitKB),
+    space_pct: spacePct,
+    files_used: formatCount(filesUsed),
+    files_limit: formatCount(filesLimit),
+    files_pct: filesPct,
+    over_quota: overQuota,
+  }
+}
+
+/**
+ * Parse `quota -vs` text output into structured QuotaInfo.
+ *
+ * Tracks "Disk quotas for usr/grp NAME" headers to associate
+ * each filesystem with its owner context.
+ */
+export function parseQuota(quotaOutput: string): QuotaInfo {
+  if (!quotaOutput.trim()) return { filesystems: [] }
+
+  console.log('[quota] raw output:\n' + quotaOutput)
+
+  const lines = quotaOutput.split('\n')
+  const filesystems: FilesystemQuota[] = []
+  let currentOwner = ''
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim()
+
+    // Parse owner header: "Disk quotas for usr ilabbe (uid 10709):"
+    //                   or "Disk quotas for grp oz030 (gid 10232):"
+    const headerMatch = trimmed.match(/^Disk quotas for (usr|grp)\s+(\S+)/)
+    if (headerMatch) {
+      const kind = headerMatch[1] === 'grp' ? 'group' : 'user'
+      currentOwner = `${kind} ${headerMatch[2]}`
+      continue
+    }
+
+    if (!trimmed.startsWith('/')) continue
+
+    let tokens = trimmed.split(/\s+/)
+
+    // Handle wrapped lines: path alone on one line, values on the next
+    if (tokens.length === 1 && i + 1 < lines.length) {
+      i++
+      tokens = [tokens[0], ...lines[i].trim().split(/\s+/)]
+    }
+
+    console.log(`[quota] tokens (${tokens.length}):`, JSON.stringify(tokens))
+
+    const fs = parseQuotaLine(tokens, currentOwner)
+    if (fs) filesystems.push(fs)
+    else console.log('[quota] parseQuotaLine returned null — need >= 9 tokens')
+  }
+
+  return { filesystems }
 }

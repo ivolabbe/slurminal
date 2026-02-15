@@ -2,6 +2,7 @@ import { Header } from './components/Header'
 import { ClusterOverview } from './components/ClusterOverview'
 import { MyJobs } from './components/MyJobs'
 import { FairShare } from './components/FairShare'
+import { Quota } from './components/Quota'
 import { JobDetails } from './components/JobDetails'
 import { useSlurm } from './hooks/useSlurm'
 
@@ -30,8 +31,16 @@ function App() {
           selectedJobId={selectedJobId}
           onSelectJob={selectJob}
         />
-        <FairShare fairShare={data?.fair_share ?? null} />
-        <JobDetails job={selectedJob} logTail={logTail} />
+        <div className="info-row">
+          {selectedJob ? (
+            <JobDetails job={selectedJob} logTail={logTail} />
+          ) : (
+            <>
+              <Quota quota={data?.quota ?? null} />
+              <FairShare fairShare={data?.fair_share ?? null} />
+            </>
+          )}
+        </div>
       </div>
     </div>
   )

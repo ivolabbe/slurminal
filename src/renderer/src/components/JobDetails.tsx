@@ -1,16 +1,11 @@
 import type { SlurmJob } from '../../../shared/types'
 
 interface JobDetailsProps {
-  job: SlurmJob | null
+  job: SlurmJob
   logTail: string | null
 }
 
 export function JobDetails({ job, logTail }: JobDetailsProps) {
-  if (!job) return (
-    <div className="panel details-panel"><div className="panel-title">Job Details</div>
-    <span style={{ color: 'var(--text-dimmed)' }}>Click a job above to view details</span></div>
-  )
-
   return (
     <div className="panel details-panel">
       <div className="panel-title">Job Details — {job.name}</div>

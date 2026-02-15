@@ -43,11 +43,28 @@ export interface FairShareInfo {
   fair_share_factor: number
 }
 
+export interface FilesystemQuota {
+  filesystem: string
+  owner: string
+  space_used: string
+  space_limit: string
+  space_pct: number
+  files_used: string
+  files_limit: string
+  files_pct: number
+  over_quota: boolean
+}
+
+export interface QuotaInfo {
+  filesystems: FilesystemQuota[]
+}
+
 export interface ClusterData {
   my_jobs: SlurmJob[]
   node_summary: NodeSummary
   top_users: TopUser[]
   fair_share: FairShareInfo
+  quota: QuotaInfo
   last_updated: string
 }
 
